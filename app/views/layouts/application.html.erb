@@ -2,7 +2,11 @@
 <html dir="ltr" lang="ja">
 <head>
     <title>doly lab</title>
-    <%= javascript_include_tag "google_analytics" %>
+    <%= stylesheet_link_tag 'application',media:'all',
+				'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application','data-turbolinks-track' => true,
+				"google_analytics" %>
+    <%= csrf_meta_tags %>
 </head>
 <body>
 <%= yield :header %>
