@@ -4,13 +4,12 @@
     <title>doly lab</title>
     <%= stylesheet_link_tag 'application',media:'all',
 				'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application','data-turbolinks-track' => true,
-			<!--"google_analytics"--> %>
+    <%= javascript_include_tag 'application','data-turbolinks-track' => true			 %>
     <%= csrf_meta_tags %>
 </head>
 <body>
-<!--<%= yield :header %>-->
+
 <%= yield %>
-<!--<%= yield :footer %>-->
+
 </body>
 </html>
