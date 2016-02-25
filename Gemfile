@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'less-rails'
 gem 'twitter-bootstrap-rails'# This is CSS template
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'

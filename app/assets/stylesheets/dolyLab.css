@@ -1,0 +1,49 @@
+.header{
+    border-top:5px solid #a9cf68;
+    border-bottom:3px solid #739938;
+}
+.logo{
+    margin:0.5em auto;
+    display:block;
+    border-bottom: 1px solid #000;
+}
+
+.headerNavBtn{
+    text-align: center;
+    height: 2.5em;
+    line-height: 2.5em;
+    color: #222;
+    font-size: 16px;
+    background: #fff;
+}
+.headerNavBtn:hover{
+    background:#95bb5a;
+}
+
+.mainBanner{
+    padding: 2px;
+    height: 300px;
+    position: relative;
+    
+}
+.mainBanner .container{
+    background-color: rgba(0,0,0,0.5);
+    height: auto;
+    bottom: 10px;
+    position: absolute;
+    color: #fff;
+    padding: 2px;
+}
+.col_vox{
+    background: #fff;
+    border-radius: 3px;
+    padding: 15px 0 15px;
+    margin-bottom: 1em;
+}
+
+.copyright{
+    text-align: center;
+    margin: 0.5em auto;
+    display: block;
+}
+

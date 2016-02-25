@@ -1,0 +1,20 @@
+<div class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+	<%= link_to image_tag("logo.jpg", alt:"dolylab", class:"logo"), '/' %>
+      </div>
+    </div>
+  </div>
+
+<div class="headerNav">
+  <div class="container">
+    <%= link_to content_tag(:div, "Home", class:"col-xs-6 col-sm-2 headerNavBtn"), "/" %>
+    <%= link_to content_tag(:div, "Researches", class:"col-xs-6 col-sm-2 headerNavBtn"), "research" %>
+    <%= link_to content_tag(:div, "Members", class:"col-xs-6 col-sm-2 headerNavBtn"), "member" %>
+    <%= link_to content_tag(:div, "Publications", class:"col-xs-6 col-sm-2 headerNavBtn"), "publication" %>
+    <%= link_to content_tag(:div, "Lectures", class:"col-xs-6 col-sm-2 headerNavBtn"), "lecture" %>
+    <%= link_to content_tag(:div, "Access", class:"col-xs-6 col-sm-2 headerNavBtn"), "access" %> 
+  </div>
+</div>
+</div>

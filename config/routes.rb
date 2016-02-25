@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
 
-  get 'reserch' =>'static_pages#reserch'
+  get 'research' =>'static_pages#research'
 
   get 'member' => 'static_pages#member'
 
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   get 'profile' => 'static_pages#profile'
 
-  get 'accsess' => 'static_pages#access'
+  get 'access' => 'static_pages#access'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
