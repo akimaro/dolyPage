@@ -34,11 +34,15 @@
     color: #fff;
     padding: 2px;
 }
-.col_vox{
-    background: #fff;
-    border-radius: 3px;
-    padding: 15px 0 15px;
-    margin-bottom: 1em;
+.section{
+    text-align: center;
+}
+h2:before {
+    content:"$: ";
+}
+.intro img{
+    margin: auto;    
+    max-height: 200px;
 }
 
 .copyright{
@@ -47,3 +51,5 @@
     display: block;
 }
 
+.footer{
+    background: #b7dd7d;
