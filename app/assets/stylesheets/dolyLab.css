@@ -37,12 +37,12 @@
 .section{
     text-align: center;
 }
-h2:before {
-    content:"$: ";
+.section h2:before {
+    content:":~$ ";
 }
 .intro img{
     margin: auto;    
-    max-height: 200px;
+    max-height: 100px;
 }
 
 .copyright{

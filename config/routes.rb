@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
 
-  get 'research' =>'static_pages#research'
+  get 'project' =>'static_pages#project'
 
   get 'member' => 'static_pages#member'
 
