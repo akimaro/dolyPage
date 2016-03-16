@@ -37,6 +37,12 @@
 .section{
     text-align: center;
 }
+
+.box{
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
 .section h2:before {
     content:":~$ ";
 }
@@ -53,4 +59,5 @@
 
 .footer{
     background: #b7dd7d;
+    margin-top: 10px;
 }

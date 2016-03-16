@@ -19,4 +19,13 @@ class StaticPagesController < ApplicationController
 
   def access
   end
+
+  def download
+    year=params[:year]
+    file=params[:name]
+    format=params[:format]
+    
+    path=Rails.root.join('public/assets/projects/', "#{year}/#{file}.#{format}")
+    send_file(path)
+  end
 end

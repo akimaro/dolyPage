@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'access' => 'static_pages#access'
 
+  get 'project/:year/:name' => 'static_pages#download', as: :download
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
