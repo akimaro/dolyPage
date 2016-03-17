@@ -51,6 +51,23 @@
     max-height: 100px;
 }
 
+#news td{
+    text-align: left;
+}
+.news_content{
+    position: relative:
+}
+.news_content>a{
+    color: #517716;
+}
+.news_content>div{
+    position: absolute;
+    padding-bottom: 20px;
+    bottom: 10%;
+    display:none;
+    background: #c8ee8e;
+}
+
 .copyright{
     text-align: center;
     margin: 0.5em auto;

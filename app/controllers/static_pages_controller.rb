@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @news = News.all
   end
 
   def project
