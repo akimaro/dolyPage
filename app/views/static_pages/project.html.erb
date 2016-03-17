@@ -3,24 +3,24 @@
     <div class="row">
       
       <%
-	 year=2031
-	 while (year-=1) > 2010 do
-           if (years_projects = @projects.where("year='#{year}'")).present?
+			year=2031
+			while (year-=1) > 2010 do
+					if (years_projects = @projects.where("year='#{year}'")).present?
       %>
       <div class="col-xs-12">
-	<div class="col-xs-12">
-	  <h3><%= year %></h3>
-	</div>
-	
-	<%
-	   years_projects.each do |pj|
-	   %>
-	<div class="col-xs-12 col-sm-4 box">
-	  <%= link_to asset_path(pj.year.to_s+"/"+pj.filename) do %>
-	  <%= image_tag("projects/"+pj.year.to_s+"/"+pj.imgfilename, class:"img-responsive center-block") if pj.imgfilename.present? %> 
-	  <p><%= pj.name %></p>
-	  <% end #with link_to %>
-	</div>
+				<div class="col-xs-12">
+					<h3><%= year %></h3>
+				</div>
+				
+				<%
+				years_projects.each do |pj|
+				%>
+				<div class="col-xs-12 col-sm-4 box">
+					<%= link_to asset_path(pj.year.to_s+"/"+pj.filename) do %>
+						<%= image_tag("projects/"+pj.year.to_s+"/"+pj.imgfilename, class:"img-responsive center-block") if pj.imgfilename.present? %> 
+						<p><%= pj.name %></p>
+					<% end #with link_to %>
+				</div>
 	<% end #with do pj %>
       </div>
       <% end #with if present? %>

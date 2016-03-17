@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'publication' => 'static_pages#publication'
 
-  get 'lecture' => 'static_pages#lecture'
+  get 'for_student' => 'static_pages#for_student'
 
   get 'profile' => 'static_pages#profile'
 

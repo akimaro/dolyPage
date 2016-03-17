@@ -2,10 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12"> 
-	<h2>人とものとの新たなコミュニケーション</h2>
-	<!--
-	<p class="lead">先端的な組込みシステム、オペレーティングシステム、スマートロボット、IoTサービスやプラットフォーム</p>
-	-->
+				<h2>人とものとの新たなコミュニケーション</h2>
+				<!--
+						 <p class="lead">先端的な組込みシステム、オペレーティングシステム、スマートロボット、IoTサービスやプラットフォーム</p>
+					 -->
       </div>
     </div>
   </div>
@@ -20,88 +20,88 @@
     </div>
     <div class="row intro">
       <div class="col-xs-3">
-	<div class="introcaption">
-	  <%= image_tag "embeded.jpg", class:"img-responsive" %>
-	  <h3>組込みシステム</h3>
-	</div>
-	<div class="introdiscription">
-	  <!-- <p>組込みシステムの説明書き</p> -->
-	</div>
+				<div class="introcaption">
+					<%= image_tag "embeded.jpg", class:"img-responsive" %>
+					<h3>組込みシステム</h3>
+				</div>
+				<div class="introdiscription">
+					<!-- <p>組込みシステムの説明書き</p> -->
+				</div>
       </div>
       <div class="col-xs-3">
-	<div class="introcaption">
-	  <%= image_tag "os.jpg", class:"img-responsive" %>	  
-	  <h3>オペレーティングシステム</h3>
-	</div>
-	<div class="introdiscription">
-	  <!-- <p>オペレーングシステムの説明書き</p> -->
-	</div>
+				<div class="introcaption">
+					<%= image_tag "os.jpg", class:"img-responsive" %>	  
+					<h3>オペレーティングシステム</h3>
+				</div>
+				<div class="introdiscription">
+					<!-- <p>オペレーングシステムの説明書き</p> -->
+				</div>
       </div>
       <div class="col-xs-3">
-	<div class="introcaption">
-	  <%= image_tag "robot.jpg", class:"img-responsive" %>
-	  <h3>ロボット</h3>
-	</div>
-	<div class="introdiscription">
-	  <!-- <p>ロボットの説明書き</p> -->
-	</div>
+				<div class="introcaption">
+					<%= image_tag "robot.jpg", class:"img-responsive" %>
+					<h3>ロボット</h3>
+				</div>
+				<div class="introdiscription">
+					<!-- <p>ロボットの説明書き</p> -->
+				</div>
       </div>
       <div class="col-xs-3">
-	<div class="introcaption">
-	  <%= image_tag "IoT.jpg", class:"img-responsive" %>
-	  <h3>IoT</h3>
-	</div>
-	<div class="introdiscription">
-	  <!-- <p>組込みシステムの説明書き</p> -->
-	</div>
+				<div class="introcaption">
+					<%= image_tag "IoT.jpg", class:"img-responsive" %>
+					<h3>IoT</h3>
+				</div>
+				<div class="introdiscription">
+					<!-- <p>組込みシステムの説明書き</p> -->
+				</div>
       </div>
     </div>
     <div class="row">
       
       <div class="col-xs-12">
-	<h2>最近の活動</h2>
-	<table id="news" class="table table-sm table-responsive table-striped">
-	  <tbody>
-	    <%
-	       i=0
-	       @news.each do |n|
-	       %>
-	    <tr>
-	      <td><%= n.date %></td>
-	      <td class="news_content">
-		<a onclick="show('<%= n.id %>')"><%= n.title.html_safe  %></a>
-		<div id="<%= n.id %>" onclick="hide('<%= n.id %>')">
-		  <h3><%= n.title.html_safe %></h3>
-		  <%= n.detail.gsub(/\\\"/, "").html_safe %>
-		</div>
-	      </td>
-	    </tr>
-	    <% 
-	       i+=1
-	       if i >= 7 then break
-	    end
-	    end
-	    %>
-	  </tbody>
-	</table>
+				<h2>最近の活動</h2>
+				<table id="news" class="table table-sm table-responsive table-striped">
+					<tbody>
+						<%
+						i=0
+						@news.each do |n|
+						%>
+						<tr>
+							<td><%= n.date %></td>
+							<td class="news_content">
+								<a onclick="show('<%= n.id %>')"><%= n.title.html_safe  %></a>
+								<div id="<%= n.id %>" onclick="hide('<%= n.id %>')">
+									<h3><%= n.title.html_safe %></h3>
+									<%= n.detail.gsub(/\\\"/, "").html_safe %>
+								</div>
+							</td>
+						</tr>
+						<% 
+						i+=1
+						if i >= 7 then break
+						end
+						end
+						%>
+					</tbody>
+				</table>
       </div>
       
     </div>
   </div>
 </div>
 <script type="text/javascript">
-  function show(id){
-  i=1
-  while(e = document.getElementById(i++)){
-  e.style.display = "none";
-  }
-  document.getElementById(id).style.display = "block";
-  }
-  function hide(id){
-  document.getElementById(id).style.display = "none";
-  }
+ function show(id){
+		 i=1
+		 while(e = document.getElementById(i++)){
+				 e.style.display = "none";
+		 }
+		 document.getElementById(id).style.display = "block";
+ }
+ function hide(id){
+		 document.getElementById(id).style.display = "none";
+ }
 </script>
-  
+
 
     
 

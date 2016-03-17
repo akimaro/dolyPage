@@ -13,7 +13,7 @@ class StaticPagesController < ApplicationController
   def publication
   end
 
-  def lecture
+  def for_student
   end
 
   def profile
