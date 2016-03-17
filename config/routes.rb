@@ -15,6 +15,8 @@ Rails.application.routes.draw do
 
   get 'project/:year/:name' => 'static_pages#download', as: :download
 
+#  get '*path', to: 'application#render_404'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
