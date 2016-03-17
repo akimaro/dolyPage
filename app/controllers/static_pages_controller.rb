@@ -4,6 +4,7 @@ class StaticPagesController < ApplicationController
   end
 
   def project
+    @projects = Project.all
   end
 
   def member
