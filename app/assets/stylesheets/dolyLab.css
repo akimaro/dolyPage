@@ -42,6 +42,10 @@
     border: 1px solid #ddd;
     padding: 5px;
 }
+.box img{
+    align: middle;
+    max-height: 300px;
+}
 
 .section h2:before {
     content:":~$ ";

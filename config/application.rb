@@ -22,8 +22,10 @@ module DolyPage
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-
+    config.assets.paths << "#{Rails.root}/app/assets/projects"
+config.assets.precompile += (Rails.root + "app/assets/projects").children.map(&:to_s)
   end
 end
+
 
 

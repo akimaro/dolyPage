@@ -27,7 +27,7 @@ class StaticPagesController < ApplicationController
     format=params[:format]
     
     path=Rails.root.join('public/assets/projects/', "#{year}/#{file}.#{format}")
-    send_file(path)
+#    send_file(path)
   end
 
   def manage
