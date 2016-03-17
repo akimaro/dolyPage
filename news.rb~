@@ -23,7 +23,7 @@ f.each do |line|
     if /^\];/.match(line)
       mode = 3
     elsif tmp = /"(?<detail>.*)",?$/.match(line)
-	#      tmp.[:detail].gsub!(/\\\"/, "\"")
+      tmp.[:detail].gsub!(/\\\"/, "\"")
       puts tmp[:detail]
       list[id2].update(detail:tmp[:detail])
     end

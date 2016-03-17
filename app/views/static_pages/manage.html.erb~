@@ -1,0 +1,31 @@
+<div class="section">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-12">
+	<h3>住所</h3>
+      </div>
+      <div class="col-xs-6">
+	<p>芝浦工業大学 工学部 情報工学科</p>
+	<p>〒135-8548 東京都江東区豊洲3-7-5 研究棟 14F 32A</p>
+      </div>
+      <div class="col-xs-6">
+	<p>【芝浦工業大学 豊洲キャンパス へのアクセス】</p>
+	<p>有楽町線豊洲駅1Cまたは3番出口から徒歩10分</p>
+	<p>JR京葉線越中島駅2番出口から徒歩15分</p>
+	<%= image_tag "access.jpg", class:"img-responsive" %>
+      </div>
+    </div>
+    
+    <div class="row">  
+      <div class="col-xs-12">
+	<h3>コンタクト</h3>
+      </div>
+      <div class="col-xs-12">
+	<p>e-mail: doly _at_ shibaura-it.ac.jp</p>
+	<p>phone : +81-03-5859-8517</p>
+      </div>
+    </div>
+    
+  </div>
+</div>

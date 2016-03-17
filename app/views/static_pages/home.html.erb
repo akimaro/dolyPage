@@ -72,7 +72,7 @@
 		<a onclick="show('<%= n.id %>')"><%= n.title.html_safe  %></a>
 		<div id="<%= n.id %>" onclick="hide('<%= n.id %>')">
 		  <h3><%= n.title.html_safe %></h3>
-		  <%= n.detail.html_safe %>
+		  <%= n.detail.gsub(/\\\"/, "").html_safe %>
 		</div>
 	      </td>
 	    </tr>

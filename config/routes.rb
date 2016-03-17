@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   get 'access' => 'static_pages#access'
 
+  get 'manage' => 'static_pages#manage'
+
   get 'project/:year/:name' => 'static_pages#download', as: :download
 
 #  get '*path', to: 'application#render_404'
