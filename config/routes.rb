@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+  resources :projects
   resources :news
 
   get 'news/new'
@@ -20,6 +22,8 @@ Rails.application.routes.draw do
   get 'access' => 'static_pages#access'
 
   get 'manage' => 'static_pages#manage'
+
+  get 'project_manage' => 'project#index'
 
 #  get '*path', to: 'application#render_404'
 

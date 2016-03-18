@@ -1,0 +1,35 @@
+<div class="section">
+  <div class="container">
+    <div class="row">
+
+			      <%
+      year=2031
+      while (year-=1) > 2010 do
+          if (years_projects = @projects.where("year='#{year}'")).present?
+      %>
+      <div class="col-xs-12">
+        <div class="col-xs-12">
+          <h3><%= year %></h3>
+        </div>
+
+        <%
+        years_projects.each do |pj|
+        %>
+        <div class="col-xs-12 col-sm-4 box">
+          <%= link_to asset_path(pj.year.to_s+"/"+pj.filename) do %>
+            <%= image_tag("projects/"+pj.year.to_s+"/"+pj.imgfilename, class:"i\
+mg-responsive center-block") if pj.imgfilename.present? %>
+            <p><%= pj.name %></p>
+					<% end #with link_to %>
+					<%= link_to "edit", "/projects/#{pj.id}/edit", class: "btn btn-info" %>
+					<%= link_to "delete", "/projects/#{pj.id}", method: :delete,
+          data: { confirm: "本当によろしいか？"}, class: "btn btn-danger" %>
+        </div>
+				<% end #with do pj %>
+      </div>
+      <% end #with if present? %>
+      <% end #with while year %>
+						
+		</div>
+  </div>
+</div>
