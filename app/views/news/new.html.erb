@@ -1,0 +1,26 @@
+<div class="section">
+  <div class="container">
+    <div class="row">
+			
+			<div class="col-xs-12">
+				<%= form_for(@news) do |f| %>
+					<%= f.label :title , "タイトル" %>
+					<%= f.text_field :title %>
+
+					<%= f.label :date, "日付 year/month/day" %>
+					<%= f.text_field :date %>
+					
+					<%= f.label :kind, "種類 0:news 1:update 2:conference"%>
+					<%= f.text_field :kind %>
+					
+					<%= f.label :detail, "詳細" %>
+					<%= f.text_field :detail %>
+
+					<%= f.submit "追加", class: "btn btn-primary" %>
+				<% end %>
+
+      </div>
+			
+		</div>
+  </div>
+</div>

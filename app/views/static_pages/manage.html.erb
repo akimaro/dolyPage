@@ -1,30 +1,24 @@
 <div class="section">
   <div class="container">
-
+		
     <div class="row">
       <div class="col-xs-12">
-	<h3>ニュース追加・編集</h3>
+				<h3>ニュース関連</h3>
       </div>
-      <div class="col-xs-6">
-	<p>芝浦工業大学 工学部 情報工学科</p>
-	<p>〒135-8548 東京都江東区豊洲3-7-5 研究棟 14F 32A</p>
-      </div>
-      <div class="col-xs-6">
-	<p>【芝浦工業大学 豊洲キャンパス へのアクセス】</p>
-	<p>有楽町線豊洲駅1Cまたは3番出口から徒歩10分</p>
-	<p>JR京葉線越中島駅2番出口から徒歩15分</p>
-	<%= image_tag "access.jpg", class:"img-responsive" %>
+      <div class="col-xs-12">
+				<p><%= link_to "新規ニュース追加", "news/new" %></p>
+				<p><%= link_to "既存ニュースの編集・削除", "news" %></p>
       </div>
     </div>
     
     <div class="row">  
       <div class="col-xs-12">
-	<h3>プロジェクト追加・編集</h3>
+				<h3>プロジェクト関連</h3>
       </div>
       <div class="col-xs-12">
-	<p>e-mail: doly _at_ shibaura-it.ac.jp</p>
-	<p>phone : +81-03-5859-8517</p>
-      </div>
+				<p><%= link_to "新規プロジェクトの追加", "project/new" %></p>
+				<p><%= link_to "既存プロジェクトの編集・削除", "project" %></p>
+			</div>
     </div>
     
   </div>

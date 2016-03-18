@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :news
+
+  get 'news/new'
+
+  get 'news/edit'
+
   root 'static_pages#home'
 
   get 'project' =>'static_pages#project'
