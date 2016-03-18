@@ -3,7 +3,7 @@
     <div class="row">
 			
 			<div class="col-xs-12">
-				<%= form_for(@project) do |f| %>
+				<%= form_for(@project, :html => {:multiple => true}) do |f| %>
 					<%= f.label :name , "プロジェクトのタイトル" %>
 					<%= f.text_field :name %>
 
@@ -14,11 +14,10 @@
 					<%= f.text_field :researcher %>
 					
 					<%= f.label :filename, "ファイル" %>
-					<%= f.text_field :filename %>
-					<%= file_field :file, :file_name %>
+					<%= f.file_field :upload_file%>
 
 					<%= f.label :imgfilename, "サムネイル画像" %>
-					<%= f.text_field :imgfilename %>
+					<%= f.file_field :img %>
 					
 					<%= f.submit "追加", class: "btn btn-primary" %>
 				<% end %>

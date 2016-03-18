@@ -17,6 +17,28 @@ class ProjectsController < ApplicationController
 
   def update
     @project = Project.find(params[:id])
+    upload_file = params[:project][:upload_file]
+    img = params[:project][:img]
+
+    if upload_file != nil
+      filename = upload_file.original_filename
+      
+      File.open("app/assets/projects/#{@project.year}/#{filename}", "wb"){|f|
+        f.write(upload_file.read)
+      }
+      @project.filename = filename
+    end
+    if img != nil
+      imgfilename = img.original_filename
+
+      File.open("app/assets/images/projects/#{@project.year}/#{imgfilename}", "\
+wb"){|f|
+        f.write(img.read)
+      }
+      @project.imgfilename = imgfilename
+    end
+
+
     if @project.update_attributes(project_params)
       @projects = Project.all
       render "index"
@@ -27,15 +49,29 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    file = params[:file]
+    upload_file = params[:project][:upload_file]
+    img = params[:project][:img]
+    
+    if upload_file != nil
+      filename = upload_file.original_filename     
+      
+      File.open("app/assets/projects/#{@project.year}/#{filename}", "wb"){|f|
+        f.write(upload_file.read)
+      }
+      @project.filename = filename
+    end
+    
+    if img != nil
+      imgfilename = img.original_filename
+
+      File.open("app/assets/images/projects/#{@project.year}/#{imgfilename}", "wb"){|f|
+        f.write(img.read)
+      }
+      @project.imgfilename = imgfilename
+    end
+
     if @project.save
       @projects = Project.all
-      
-      if upload_file != nil
-        content[:upload_file] = upload_file.read
-        content[:upload_file_name] = upload_file.original_filename
-      end
-      
       render "index"
     else
       render "new"
