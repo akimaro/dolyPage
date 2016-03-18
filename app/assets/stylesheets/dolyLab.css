@@ -37,6 +37,18 @@
 .section{
     text-align: center;
 }
+.section p{
+    text-align: left;
+}
+#profileimg{
+    max-height: 200px;
+    float: right;
+    clear: right;
+}
+
+li{
+    text-align: left;
+}
 
 .box{
     border: 1px solid #ddd;
