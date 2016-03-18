@@ -23,7 +23,7 @@ class ProjectsController < ApplicationController
     if upload_file != nil
       filename = upload_file.original_filename
       
-      File.open("app/assets/projects/#{@project.year}/#{filename}", "wb"){|f|
+      File.open("assets/projects/#{@project.year}/#{filename}", "wb"){|f|
         f.write(upload_file.read)
       }
       @project.filename = filename
@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
     if img != nil
       imgfilename = img.original_filename
 
-      File.open("app/assets/images/projects/#{@project.year}/#{imgfilename}", "\
+      File.open("assets/images/projects/#{@project.year}/#{imgfilename}", "\
 wb"){|f|
         f.write(img.read)
       }
