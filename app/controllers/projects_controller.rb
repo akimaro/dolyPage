@@ -23,7 +23,7 @@ class ProjectsController < ApplicationController
     if upload_file != nil
       filename = upload_file.original_filename
       
-      File.open("assets/projects/#{@project.year}/#{filename}", "wb"){|f|
+      File.open(Rails.root.join('public','projects',@project.year,filename), "wb"){|f|
         f.write(upload_file.read)
       }
       @project.filename = filename
@@ -31,8 +31,7 @@ class ProjectsController < ApplicationController
     if img != nil
       imgfilename = img.original_filename
 
-      File.open("assets/images/projects/#{@project.year}/#{imgfilename}", "\
-wb"){|f|
+      File.open(Rails.root.join('images','projects',@project.year,imgfilename), "wb"){|f|
         f.write(img.read)
       }
       @project.imgfilename = imgfilename
@@ -54,8 +53,7 @@ wb"){|f|
     
     if upload_file != nil
       filename = upload_file.original_filename     
-      
-      File.open("app/assets/projects/#{@project.year}/#{filename}", "wb"){|f|
+      File.open(Rails.root.join('public','projects',@project.year,filename), "wb"){|f|
         f.write(upload_file.read)
       }
       @project.filename = filename
@@ -63,8 +61,7 @@ wb"){|f|
     
     if img != nil
       imgfilename = img.original_filename
-
-      File.open("app/assets/images/projects/#{@project.year}/#{imgfilename}", "wb"){|f|
+      File.open(Rails.root.join('public','images','projects',@project.year,filename), "wb"){|f|
         f.write(img.read)
       }
       @project.imgfilename = imgfilename

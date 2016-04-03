@@ -20,11 +20,11 @@ class NewsController < ApplicationController
     if @news.update_attributes(news_params)
       @news = News.all
       render "index"
-    else
-      render "edit"
+    
+    render "edit"
     end
   end
-  
+
   def create
     @news = News.new(news_params)
     
