@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   
   resources :projects
+  resources :projects do
+    member do
+      get 'download'
+    end
+  end
   resources :news
 
   get 'news/new'

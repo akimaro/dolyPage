@@ -1,0 +1,8 @@
+class ChangeSchemeOfProjects < ActiveRecord::Migration
+  def change
+    remove_column :projects, :imgfilename
+    
+    remove_column :projects, :filename
+    add_column :projects, :filedata, :binary
+  end
+end

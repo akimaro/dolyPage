@@ -23,7 +23,7 @@ class ProjectsController < ApplicationController
     if upload_file != nil
       filename = upload_file.original_filename
       
-      File.open(Rails.root.join('public','projects',@project.year,filename), "wb"){|f|
+      File.open(Rails.root.join('public','assets','projects',@project.year.to_s,filename), "wb"){|f|
         f.write(upload_file.read)
       }
       @project.filename = filename
@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
     if img != nil
       imgfilename = img.original_filename
 
-      File.open(Rails.root.join('images','projects',@project.year,imgfilename), "wb"){|f|
+      File.open(Rails.root.join('public','assets','images','projects',@project.year.to_s,imgfilename), "wb"){|f|
         f.write(img.read)
       }
       @project.imgfilename = imgfilename
@@ -53,7 +53,7 @@ class ProjectsController < ApplicationController
     
     if upload_file != nil
       filename = upload_file.original_filename     
-      File.open(Rails.root.join('public','projects',@project.year,filename), "wb"){|f|
+      File.open(Rails.root.join('public','assets','projects',@project.year.to_s,filename), "wb"){|f|
         f.write(upload_file.read)
       }
       @project.filename = filename
@@ -61,7 +61,7 @@ class ProjectsController < ApplicationController
     
     if img != nil
       imgfilename = img.original_filename
-      File.open(Rails.root.join('public','images','projects',@project.year,filename), "wb"){|f|
+      File.open(Rails.root.join('public','assets','images','projects',@project.year.to_s,filename), "wb"){|f|
         f.write(img.read)
       }
       @project.imgfilename = imgfilename
@@ -79,6 +79,11 @@ class ProjectsController < ApplicationController
     Project.find(params[:id]).destroy
     flash[:success] = "project deleted"
     redirect_to "/projects"
+  end
+
+  def download
+    @pj = Project.find(params[:id])
+    send_file Rails.root.join('public','assets','projects',@pj.year.to_s,@pj.filename)
   end
   
   private
