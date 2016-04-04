@@ -75,17 +75,17 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def download
+    @pj = Project.find(params[:id])
+    send_file Rails.root.join('public','assets','projects',@pj.year.to_s,@pj.filename)
+  end
+  
   def destroy
     Project.find(params[:id]).destroy
     flash[:success] = "project deleted"
     redirect_to "/projects"
   end
 
-  def download
-    @pj = Project.find(params[:id])
-    send_file Rails.root.join('public','assets','projects',@pj.year.to_s,@pj.filename)
-  end
-  
   private
   
   def project_params

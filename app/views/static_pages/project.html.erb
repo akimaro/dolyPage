@@ -16,7 +16,7 @@
 				years_projects.each do |pj|
 				%>
 				<div class="col-xs-12 col-sm-4 box">
-					<%= link_to asset_path(pj.year.to_s+"/"+pj.filename) do %>
+					<%= link_to download_project_path(pj) do %>
 						<%= image_tag("projects/"+pj.year.to_s+"/"+pj.imgfilename, class:"img-responsive center-block") if pj.imgfilename.present? %> 
 						<p><%= pj.name %></p>
 					<% end #with link_to %>
